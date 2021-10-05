@@ -143,14 +143,14 @@ export class Axios {
     response: AxiosInterceptorManager<AxiosResponse>;
   };
   getUri(config?: AxiosRequestConfig): string;
-  request<T = never, R = AxiosResponse<T>> (config: AxiosRequestConfig<T>): Promise<R>;
-  get<T = never, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
-  delete<T = never, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
-  head<T = never, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
-  options<T = never, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
-  post<T = never, R = AxiosResponse<T>>(url: string, data?: T, config?: AxiosRequestConfig<T>): Promise<R>;
-  put<T = never, R = AxiosResponse<T>>(url: string, data?: T, config?: AxiosRequestConfig<T>): Promise<R>;
-  patch<T = never, R = AxiosResponse<T>>(url: string, data?: T, config?: AxiosRequestConfig<T>): Promise<R>;
+  request<T = unknown, R = AxiosResponse<T>> (config: AxiosRequestConfig<T>): Promise<R>;
+  get<T = unknown, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
+  delete<T = unknown, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
+  head<T = unknown, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
+  options<T = unknown, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig<T>): Promise<R>;
+  post<T = unknown, R = AxiosResponse<T>>(url: string, data?: any, config?: AxiosRequestConfig<T>): Promise<R>;
+  put<T = unknown, R = AxiosResponse<T>>(url: string, data?: any, config?: AxiosRequestConfig<T>): Promise<R>;
+  patch<T = unknown, R = AxiosResponse<T>>(url: string, data?: any, config?: AxiosRequestConfig<T>): Promise<R>;
 }
 
 export interface AxiosInstance extends Axios {
